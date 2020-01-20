@@ -15,8 +15,8 @@ Vagrant.configure("2") do |config|
    app.vm.synced_folder "app", "/home/ubuntu/app"
    #app.vm.provision "shell", path: "provision.sh", privileged: false
   app.vm.provision "chef_solo" do |chef|
-    #chef.cookbooks_path = ["C:/Users/It_Jobs_Watch_Data_Package-master"]
-    chef.cookbooks_path = ["C:/Users/Cookbooks"]
+    chef.cookbooks_path = ["C:/Users/It_Jobs_Watch_Data_Package-master"]
+    # chef.cookbooks_path = ["C:/Users/Cookbooks"]
     chef.add_recipe "python::default"
     end
   end
